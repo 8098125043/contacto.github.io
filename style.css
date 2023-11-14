@@ -4,17 +4,24 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
+}
+
+header {
+    background-color: #7a5c3c;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+
 }
 
 form {
     display: flex;
     flex-direction: column;
-
     align-items: flex-start;
-
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
@@ -28,6 +35,9 @@ legend {
     margin-bottom: 10px;
     color: #7a5c3c;
 }
+
+
+
 
 fieldset {
     border: none;
@@ -43,7 +53,6 @@ input {
     padding: 8px;
     margin-bottom: 10px;
     width: calc(100% - 18px);
-
     box-sizing: border-box;
 }
 
@@ -61,11 +70,9 @@ button:hover {
     background-color: #e8c39e;
 }
 
-
 #qrC {
     width: 200px;
     height: 200px;
     margin-top: 20px;
     margin-left: 20px;
-
 }
