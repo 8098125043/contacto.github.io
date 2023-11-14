@@ -6,40 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de contacto</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script defer src="app.js">
+    </script>
+
 </head>
 
 <body>
 
-    <div class="contenedor-form()">
-        <form action="crearcontacto">
-            <fieldset>
-                <legend>Crear Nuevo Contacto</legend>
-                <img src="img/anadir-amigo.png" alt="">
-                <input type="text" placeholder=" Nombre">
-                <br>
+    <form id="formulario">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
 
-                <img src="img/anadir-amigo.png" alt="">
-                <input type="text" placeholder="Apellido">
-                <br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+        <br>
 
-                <img src="img/receptor.png" alt="">
-                <input type="tel" placeholder="Telefono">
-                <br>
+        <label for="tel">Teléfono:</label>
+        <input type="tel" id="tel" name="telefono" required>
+        <br>
 
-                <img src="img/letra.png" alt="">
-                <input type="email" placeholder="Email">
-                <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
 
-                <img src="img/documento.png" alt="">
-                <input type="text" placeholder="Notas">
-                <br><br>
+        <label for="nota">Notas:</label>
+        <input type="text" id="nota" name="notas">
+        <br><br>
 
-                <button type="button" onclick="guardarContacto()">Guardar</button>
+        <button type="submit">Guardar y Generar QR</button>
+    </form>
 
-            </fieldset>
+    <div id="qrC"></div>
 
-        </form>
-    </div>
 
 </body>
 
