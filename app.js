@@ -13,24 +13,32 @@ document.addEventListener('DOMContentLoaded', function () {
         let notas = formulario.notas.value;
 
 
-        let contacto = {
-            "Nombre": nombre,
+        /* let contacto = {
+        "Nombre": nombre,
             "Apellido": apellido,
-            "Telefono": telefono,
-            "Email": email,
-            "Notas": notas
+                "Telefono": telefono,
+                    "Email": email,
+                        "Notas": notas
         };
+        let contactoJSON = JSON.stringify(contacto);*/
 
-
-        let contactoJSON = JSON.stringify(contacto);
+        let vCard = `
+        BEGIN:VCARD
+        VERSION:3.0
+        FN:${nombre} ${apellido}
+        TEL:${telefono}
+        EMAIL:${email}
+        NOTE:${notas}
+        END:VCARD
+                `;
 
 
         contenedorQR.innerHTML = ''; // con esto limpio mi contenedor del qr
 
 
         const QR = new QRCode(contenedorQR, {
-            text: contactoJSON,
-            width: 200,
+            text: vCard,
+            width: 200,//aqui proporcione el tamaño 
             height: 200
         });
     });
