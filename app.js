@@ -41,9 +41,10 @@ document.addEventListener('DOMContentLoaded', function () {
             width: 200,//aqui proporcione el tamaño 
             height: 200
         });
+
         // Crea un enlace para descargar el archivo vCard
         const downloadLink = document.createElement('a');
-        downloadLink.href = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vCardData);
+        downloadLink.href = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(vCard);
         downloadLink.download = 'contacto.vcf';
         downloadLink.textContent = 'Descargar contacto';
         document.body.appendChild(downloadLink);
