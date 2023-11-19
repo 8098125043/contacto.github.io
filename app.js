@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let apellido = formulario.apellido.value;
         let telefono = formulario.telefono.value;
         let email = formulario.email.value;
-        let notas = formulario.notas.value;
+        let notas = formulario.nota.value;
 
 
         /* let contacto = {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
         const QR = new QRCode(contenedorQR, {
-            text: vCard,
+            text: vCard,// aqui va lo que convertiremos en qr
             width: 200,//aqui proporcione el tamaño 
             height: 200
         });
